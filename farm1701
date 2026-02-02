@@ -1,0 +1,6 @@
+git clone https://github.com/rrico234/farm1701shopify.git
+cd farm1701shopify
+cp -r /path/to/extracted/theme/* .
+git add .
+git commit -m "Add Farm1701 theme"
+git push
