@@ -1,0 +1,27 @@
+.github/workflows/enable-automerge.yml
+name: Enable Auto-merge for Agent PRs
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  enable_automerge:
+    runs-on: ubuntu-latest
+
+    # SAFE DEFAULT: only auto-enable on PRs from branches that start with agent/ or chatgpt/
+    # If your agent uses a different prefix later, update these two lines.
+    if: |
+      startsWith(github.event.pull_request.head.ref, 'agent/')
+      || startsWith(github.event.pull_request.head.ref, 'chatgpt/')
+
+    steps:
+      - name: Enable auto-merge (squash)
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: squash
