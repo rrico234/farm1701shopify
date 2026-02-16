@@ -1,0 +1,22 @@
+name: Enable Auto-merge for Agent PRs
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  enable_automerge:
+    runs-on: ubuntu-latest
+    if: startsWith(github.event.pull_request.head.ref, 'agent/') ||
+        startsWith(github.event.pull_request.head.ref, 'chatgpt/') ||
+        startsWith(github.event.pull_request.head.ref, 'codex/')
+    steps:
+      - name: Enable auto-merge (squash)
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: squash
