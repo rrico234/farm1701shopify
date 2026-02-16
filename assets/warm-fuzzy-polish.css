@@ -1,0 +1,113 @@
+/* warm-fuzzy-polish.css */
+/* Spacing and typography improvements */
+.warm-fuzzy-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .warm-fuzzy-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+/* Alternate subtle section backgrounds */
+.warm-fuzzy-section:nth-of-type(even) {
+  background-color: #f7f7f7;
+}
+/* Value prop / testimonial cards polish */
+.warm-fuzzy-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .warm-fuzzy-card {
+    margin-bottom: 2rem;
+  }
+}
+.warm-fuzzy-card h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.warm-fuzzy-card p {
+  margin: 0.5rem 0 0;
+}
+/* Button hierarchy improvements */
+.warm-fuzzy-button-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #C34A36;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.warm-fuzzy-button-primary:hover {
+  background-color: #a3382a;
+}
+.warm-fuzzy-button-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #C34A36;
+  border: 2px solid #C34A36;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.warm-fuzzy-button-secondary:hover {
+  background-color: #C34A36;
+  color: #ffffff;
+}
+/* Video embed styling */
+.warm-fuzzy-video {
+  margin-top: 1.5rem;
+}
+.warm-fuzzy-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.warm-fuzzy-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* How it works section */
+.warm-fuzzy-how-it-works .steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .warm-fuzzy-how-it-works .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.warm-fuzzy-how-it-works .step {
+  text-align: center;
+}
+.warm-fuzzy-how-it-works .step img {
+  max-width: 64px;
+  margin: 0 auto 1rem;
+}
+.warm-fuzzy-how-it-works .step h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.warm-fuzzy-how-it-works .step p {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
