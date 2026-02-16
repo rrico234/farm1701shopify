@@ -44,6 +44,23 @@
 
     {% assign products_per_page = 24 %}
 
+    {% assign collection_intro = '' %}
+    {% if collection.handle == 'grass-fed-beef' %}
+      {% assign collection_intro = 'Our grass-fed beef is raised on pasture in Texas and packed cold for dependable UPS shipping, or free pickup in Harlingen.' %}
+    {% elsif collection.handle == 'pasture-raised-chicken' %}
+      {% assign collection_intro = 'Our pasture-raised chicken is processed with care and shipped insulated via UPS, with free local pickup available in Harlingen.' %}
+    {% elsif collection.handle == 'pasture-raised-pork' %}
+      {% assign collection_intro = 'Our pasture-raised pork is carefully packed to arrive cold and fresh, and you can always choose free pickup in Harlingen.' %}
+    {% endif %}
+
+    {% if collection_intro != blank %}
+      <div class="main-collection-grid">
+        <div class="warm-fuzzy-collection-intro rte">
+          <p>{{ collection_intro }}</p>
+        </div>
+      </div>
+    {% endif %}
+
     {% if section.settings.enable_infinite_scroll == false %}
       {% assign products_per_page = section.settings.products_per_page %}
     {% endif %}
