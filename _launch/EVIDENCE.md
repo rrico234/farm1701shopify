@@ -25,3 +25,11 @@
 ## Safety
 - [ ] No “Welcome to our store” placeholder remains.
 - [ ] JSON templates parse successfully.
+
+
+## Post-sync baseline (2026-02-16)
+- [ ] **Theme evidence:** Verified STAGING vs LIVE themes on Shopify Admin; screenshot captured【780673659155845†screenshot】.
+- [ ] **Home page baseline:** Baseline warm-fuzzy sections appear on home page; screenshots show hero, value props, products, trust, and sections【597440976223271†screenshot】【452371910067892†screenshot】【643827147927563†screenshot】.
+- [ ] **PDP baseline:** Product detail page shows trust bullets near bottom; screenshot captured【631583951552227†screenshot】.
+- [ ] **Cart baseline:** Cart slide-out after adding item shows items and totals; screenshot captured【900908874389276†screenshot】.
+- [ ] **Checkout baseline:** Shipping step of checkout loads properly; screenshot captured【797706642879114†screenshot】.
