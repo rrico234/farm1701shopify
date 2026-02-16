@@ -1,4 +1,14 @@
-# Launch Changelog
+# Launch ## 2026-02-16 — P1 Warm Fuzzy Audit
+- Completed Warm Fuzzy Audit across Home, Core Collection (Beef/Chicken/Pork), PDP, Cart, Shipping & Pickup page, Contact page, Recipes Hub, and Experience Hub.
+- Added warm fuzzy scores, top friction points, warmth deficits, and ROI opportunities to `RUNBOOK.md`.
+- Updated `EVIDENCE.md` with baseline screenshots referencing citation IDs.
+- Created branch `agent/warm-fuzzy-audit` and updated changelog.
+
+### Revert
+- Remove the audit entry from `RUNBOOK.md` and this changelog entry.
+- Delete added baseline evidence section from `EVIDENCE.md`.
+
+Changelog
 
 ## 2026-02-16 — P0 Warm Fuzzy CRO pass
 - Home: reordered to hero → our why → value props → start here → testimonials → story teaser → email capture.
