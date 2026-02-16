@@ -5,12 +5,22 @@
   </div>
 </div>
 
+  {% if section.settings.video_url != blank %}
+    <div class="warm-fuzzy-video">
+      <div class="warm-fuzzy-video-wrapper">
+
+      <iframe src="{{ section.settings.video_url | replace: 'watch?v=', 'embed/' }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  {% endif %}
+
 {% schema %}
 {
   "name": "Warm Fuzzy — Our Why",
   "settings": [
     { "type": "text", "id": "title", "label": "Title", "default": "Our Why" },
     { "type": "richtext", "id": "body", "label": "Body", "default": "<p>Share your founder story and why this farm exists.</p>" },
+  { "type": "text", "id": "video_url", "label": "Video URL (optional)", "default": "" },
     { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 100, "step": 4, "default": 40, "unit": "px" },
     { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 100, "step": 4, "default": 24, "unit": "px" }
   ],
