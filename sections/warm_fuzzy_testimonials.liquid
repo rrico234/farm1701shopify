@@ -1,0 +1,36 @@
+<div class="warm-fuzzy-section warm-fuzzy-testimonials section" style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <h2 class="warm-fuzzy-title">{{ section.settings.title }}</h2>
+    <div class="warm-fuzzy-cards">
+      {% for block in section.blocks %}
+        <blockquote class="warm-fuzzy-card warm-fuzzy-quote" {{ block.shopify_attributes }}>
+          <p>{{ block.settings.quote }}</p>
+          <cite>{{ block.settings.author }}</cite>
+        </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warm Fuzzy — Testimonials",
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "Customer quote." },
+        { "type": "text", "id": "author", "label": "Author", "default": "— Happy customer" }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "What customers are saying" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 100, "step": 4, "default": 24, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 100, "step": 4, "default": 24, "unit": "px" }
+  ],
+  "presets": [{ "name": "Warm Fuzzy — Testimonials" }]
+}
+{% endschema %}

@@ -12,12 +12,79 @@
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
-        "button_H9gpTf": {
+        "text_heading": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h1>Farm1701 \u2014 Pasture\u2011Raised, Texas Proud.</h1>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#ffffff",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_subhead": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Grass\u2011fed beef, pasture\u2011raised chicken &amp; pork. Ship via UPS or pick up in Harlingen.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1.125rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "#ffffff",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_shop": {
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Shop Now",
-            "link": "shopify://collections/all",
+            "label": "Start Shopping",
+            "link": "/collections",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        },
+        "button_shipping": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Shipping & Pickup",
+            "link": "/pages/shipping-pickup",
             "open_in_new_tab": false,
             "style_class": "button-secondary",
             "width": "fit-content",
@@ -29,7 +96,10 @@
         }
       },
       "block_order": [
-        "button_H9gpTf"
+        "text_heading",
+        "text_subhead",
+        "button_shop",
+        "button_shipping"
       ],
       "name": "t:names.hero",
       "settings": {
@@ -105,7 +175,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
+                "text": "<h3>Start Here: Farm Favorites</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -131,7 +201,7 @@
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
-                "label": "View all",
+                "label": "Shop all",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -242,7 +312,7 @@
         "collection": "all",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 8,
+        "max_products": 6,
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
@@ -1012,7 +1082,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Farm1701 isn't just about selling meat—it's about nurturing healthier families and land. Our goal is to raise animals naturally on our Texas pastures, treat them with respect, and provide wholesome food you can feel good about sharing. By honoring time-tested practices and working as a family, we're building a brighter future for our kids and our community.</p>",
+            "text": "<p>Farm1701 isn't just about selling meat\u2014it's about nurturing healthier families and land. Our goal is to raise animals naturally on our Texas pastures, treat them with respect, and provide wholesome food you can feel good about sharing. By honoring time-tested practices and working as a family, we're building a brighter future for our kids and our community.</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -1067,19 +1137,122 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "warm_fuzzy_our_why": {
+      "type": "warm_fuzzy_our_why",
+      "name": "Our Why",
+      "settings": {
+        "title": "Our Why",
+        "body": "<p>We started Farm1701 to feed families the way we feed our own\u2014clean, honest meat raised on open pasture with care for the land and animals. From our family in Harlingen to your table, thank you for trusting us with your meals.</p>",
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "warm_fuzzy_value_props": {
+      "type": "warm_fuzzy_value_props",
+      "name": "Value Props",
+      "blocks": {
+        "card1": {
+          "type": "card",
+          "settings": {
+            "title": "Pasture-Raised Texas",
+            "text": "Raised responsibly on Texas pasture with no shortcuts."
+          }
+        },
+        "card2": {
+          "type": "card",
+          "settings": {
+            "title": "Cold-Packed UPS Shipping",
+            "text": "Insulated, cold-packed boxes ship Monday\u2013Wednesday for freshness."
+          }
+        },
+        "card3": {
+          "type": "card",
+          "settings": {
+            "title": "Free Harlingen Pickup",
+            "text": "Free local pickup at 1701 S Palm Blvd, Mon\u2013Thu 8 AM\u20135 PM."
+          }
+        }
+      },
+      "block_order": [
+        "card1",
+        "card2",
+        "card3"
+      ],
+      "settings": {
+        "title": "Why families choose Farm1701",
+        "padding_top": 16,
+        "padding_bottom": 24
+      }
+    },
+    "warm_fuzzy_testimonials": {
+      "type": "warm_fuzzy_testimonials",
+      "name": "Testimonials",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\u201cThe quality is incredible, and shipping was still cold when it arrived.\u201d",
+            "author": "\u2014 Maria G., South Texas"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\u201cI love knowing exactly where our meat comes from and who raised it.\u201d",
+            "author": "\u2014 Daniel R., Harlingen"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "\u201cPickup is easy, and every cut has been tender and flavorful.\u201d",
+            "author": "\u2014 Stephanie L., Rio Grande Valley"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "title": "What customers are saying",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "warm_fuzzy_story_teaser": {
+      "type": "warm_fuzzy_story_teaser",
+      "name": "Story Teaser",
+      "settings": {
+        "title": "From our family ranch in Harlingen",
+        "body": "<p>Meet the team behind Farm1701\u2014Juan, Angelica, and the crew working side by side to raise better meat with integrity. Learn more about our story, our values, and why this mission matters to us.</p>",
+        "link_label": "Read our story",
+        "link": "/pages/about",
+        "padding_top": 24,
+        "padding_bottom": 32
+      }
+    },
+    "warm_fuzzy_email_capture": {
+      "type": "warm_fuzzy_email_capture",
+      "name": "Email Capture",
+      "settings": {
+        "title": "Get ranch updates and first access",
+        "body": "Be first to know when popular cuts are back in stock and when new bundles drop.",
+        "button_label": "Sign up",
+        "padding_top": 24,
+        "padding_bottom": 48
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
+    "warm_fuzzy_our_why",
+    "warm_fuzzy_value_props",
     "product_list_fa6P9H",
-    "collection_links_97n7mD",
-    "collection_links_4Y4irQ",
-    "collection_list_4hKEw9",
-    "section_eXkV8q",
-    "collection_links_FHhwAE",
-    "collection_links_L7Edxq",
-    "section_KaEtiF",
-    "product_list_ARhiWq",
-    "section_DedqA3"
+    "warm_fuzzy_testimonials",
+    "warm_fuzzy_story_teaser",
+    "warm_fuzzy_email_capture"
   ]
 }

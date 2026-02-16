@@ -1,0 +1,36 @@
+<div class="warm-fuzzy-section warm-fuzzy-value-props section" style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px;">
+  <div class="page-width">
+    <h2 class="warm-fuzzy-title">{{ section.settings.title }}</h2>
+    <div class="warm-fuzzy-cards">
+      {% for block in section.blocks %}
+        <article class="warm-fuzzy-card" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warm Fuzzy — Value Props",
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Pasture-raised Texas" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Simple reassurance copy." }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "Why families choose Farm1701" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 100, "step": 4, "default": 16, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 100, "step": 4, "default": 24, "unit": "px" }
+  ],
+  "presets": [{ "name": "Warm Fuzzy — Value Props" }]
+}
+{% endschema %}
