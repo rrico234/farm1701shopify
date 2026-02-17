@@ -1,0 +1,89 @@
+/* warm-fuzzy-polish.css
+ * Premium polish layer for warm-fuzzy sections.
+ * Adds spacing rhythm, text width, card polish, button hierarchy,
+ * alternating section backgrounds, and improved typography.
+ */
+
+.warm-fuzzy-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .warm-fuzzy-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.warm-fuzzy-section .warm-fuzzy-container,
+.warm-fuzzy-section .warm-fuzzy-text-container {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.warm-fuzzy-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(var(--color-foreground-rgb), 0.1);
+  background-color: rgb(var(--color-background-rgb));
+  padding: 1.25rem;
+}
+
+.warm-fuzzy-card + .warm-fuzzy-card {
+  margin-top: 1.25rem;
+}
+
+.warm-fuzzy-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.warm-fuzzy-card p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.warm-fuzzy-section:nth-of-type(even) {
+  background-color: rgba(var(--color-foreground-rgb), 0.02);
+}
+
+.warm-fuzzy-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.warm-fuzzy-button--primary {
+  background-color: rgb(var(--color-accent-rgb));
+  color: rgb(var(--color-background-rgb));
+}
+
+.warm-fuzzy-button--secondary {
+  background-color: transparent;
+  color: rgb(var(--color-accent-rgb));
+  border: 2px solid rgb(var(--color-accent-rgb));
+}
+
+.warm-fuzzy-trust-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+
+.warm-fuzzy-trust-list li {
+  margin-bottom: 0.25rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.warm-fuzzy-trust-list li::before {
+  content: '\\2714';
+  position: absolute;
+  left: 0;
+  color: rgb(var(--color-accent-rgb));
+}
