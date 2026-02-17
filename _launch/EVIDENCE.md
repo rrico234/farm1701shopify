@@ -25,3 +25,9 @@
 ## Safety
 - [ ] No “Welcome to our store” placeholder remains.
 - [ ] JSON templates parse successfully.
+### 2026-02-17 — Phase 3 & 4 Evidence
+
+- Home page hero still shows farmland image; new warm-fuzzy sections not yet applied due to index.json edit limitation【938000153698298†screenshot】.
+- P- Pasture-Raised Chicken & Pork reservation sections appear mid-page but remain placeholder style【321213781273488†screenshot】.
+- T- The bottom of the home page displays trust and policy copy with shipping, privacy, refund, contact info, hours, and team names【4- Product page (Boneless New York strip steak) shows trust bullet list (ships via UPS with cold packs, free local pickup with address/hours, contact phone and team names)【59107751867402†screenshot】.
+- Product page (Boneless New York strip steak) shows trust bullet list (ships via UPS with cold packs, free local pickup with address/hours, contact phone and team names)【59107751867402†screenshot】.
