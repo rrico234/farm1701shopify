@@ -1,0 +1,57 @@
+<div class="warm-fuzzy-section warm-fuzzy-how-it-works section" style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px">
+  <div class="page-width warm-fuzzy-text-container">
+    {% if section.settings.title != blank %}
+      <h2 class="warm-fuzzy-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.subheading != blank %}
+      <p class="warm-fuzzy-subtitle">{{ section.settings.subheading }}</p>
+    {% endif %}
+    <div class="warm-fuzzy-steps">
+      {% for block in section.blocks %}
+        <div class="warm-fuzzy-step">
+          {% if block.settings.icon != blank %}
+            <div class="warm-fuzzy-step-icon">
+              <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="{{ block.settings.title }}">
+            </div>
+          {% endif %}
+          <h3 class="warm-fuzzy-step-title">{{ block.settings.title }}</h3>
+          <p class="warm-fuzzy-step-text">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Warm Fuzzy – How it works",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Heading", "default": "How it works" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 100, "step": 4, "default": 40, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 100, "step": 4, "default": 24, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Step title" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Describe this step." },
+        { "type": "image_picker", "id": "icon", "label": "Icon" }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Warm Fuzzy – How it works",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Choose your cuts", "text": "Select from our grass‑fed beef, pasture‑raised chicken & pork.", "icon": "" } },
+        { "type": "step", "settings": { "title": "Cold‑pack & UPS ship", "text": "We cold‑pack and ship via UPS or prepare for local pickup.", "icon": "" } },
+        { "type": "step", "settings": { "title": "Cook & enjoy", "text": "Prepare your meal and enjoy the farm‑fresh taste.", "icon": "" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
