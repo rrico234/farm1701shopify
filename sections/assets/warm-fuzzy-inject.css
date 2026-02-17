@@ -1,0 +1,177 @@
+/* warm-fuzzy-inject.css — scoped, additive, reversible */
+.warm-fuzzy-home-inject {
+  padding-block: 36px;
+}
+
+@media (min-width: 990px) {
+  .warm-fuzzy-home-inject {
+    padding-block: 56px;
+  }
+}
+
+.warm-fuzzy-home-inject__inner {
+  max-width: 1200px;
+}
+
+.warm-fuzzy-home-inject__grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 990px) {
+  .warm-fuzzy-home-inject__grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+    gap: 28px;
+  }
+}
+
+.warm-fuzzy-home-inject__intro {
+  max-width: 72ch;
+}
+
+.warm-fuzzy-eyebrow {
+  margin: 0 0 10px;
+  opacity: 0.85;
+  font-size: 0.95em;
+}
+
+.warm-fuzzy-title {
+  margin: 0 0 10px;
+}
+
+.warm-fuzzy-subtitle {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.warm-fuzzy-teamline {
+  margin: 0 0 18px;
+  opacity: 0.9;
+}
+
+.warm-fuzzy-home-inject__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Card polish (fallback if warm-fuzzy-polish isn’t present) */
+.warm-fuzzy-card {
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 12px;
+  padding: 18px;
+  background: rgba(255,255,255,0.92);
+}
+
+@media (min-width: 990px) {
+  .warm-fuzzy-card {
+    padding: 22px;
+  }
+}
+
+.warm-fuzzy-trust-list {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.warm-fuzzy-risk {
+  margin: 14px 0 0;
+  font-weight: 600;
+}
+
+.warm-fuzzy-home-inject__paths {
+  margin-top: 26px;
+}
+
+@media (min-width: 990px) {
+  .warm-fuzzy-home-inject__paths {
+    margin-top: 34px;
+  }
+}
+
+.warm-fuzzy-home-inject__cards {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+@media (min-width: 990px) {
+  .warm-fuzzy-home-inject__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.warm-fuzzy-path-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.warm-fuzzy-path-card__title {
+  margin: 0 0 8px;
+}
+
+.warm-fuzzy-path-card__text {
+  margin: 0 0 10px;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.warm-fuzzy-path-card__cta {
+  font-weight: 700;
+}
+
+.warm-fuzzy-home-inject__testimonials {
+  margin-top: 26px;
+}
+
+.warm-fuzzy-home-inject__testimonial-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+@media (min-width: 990px) {
+  .warm-fuzzy-home-inject__testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+.warm-fuzzy-quote {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.warm-fuzzy-quote-meta {
+  margin: 0;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.warm-fuzzy-home-inject__newsletter {
+  margin-top: 26px;
+}
+
+.warm-fuzzy-muted {
+  opacity: 0.9;
+  line-height: 1.55;
+}
+
+.warm-fuzzy-newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.warm-fuzzy-newsletter-form input[type="email"] {
+  min-width: 220px;
+  flex: 1 1 240px;
+  padding: 12px 12px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
