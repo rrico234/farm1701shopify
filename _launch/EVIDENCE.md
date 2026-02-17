@@ -25,3 +25,14 @@
 ## Safety
 - [ ] No “Welcome to our store” placeholder remains.
 - [ ] JSON templates parse successfully.
+
+
+## 2026-02-17 — Phase 5 Evidence
+
+- Home hero still shows farmland, not new warm-fuzzy sections【938000153698298†screenshot】.
+- Deposit sections for Pasture‑Raised Chicken & Pork appear but product counts missing【321213781273488†screenshot】.
+- Bottom of home page displays shipping, refund, privacy, contact details and hours【497103503914580†screenshot】.
+- Contact page confirms phone, address, hours, shipping/pickup info【812218546097421†screenshot】.
+- Shipping policy page explains shipping schedule, transit times, flat-rate rates, and local pickup instructions【960552141883037†screenshot】.
+- Refund policy page returns 404 (missing)【723743465730525†screenshot】.
+- PDP trust bullets appear near top with shipping/pickup guarantee and contact/team info【59107751867402†screenshot】.
